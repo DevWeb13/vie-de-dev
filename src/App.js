@@ -13,6 +13,15 @@ const App = () => {
   return (
     <div>
       <div className="app-header">
+        {user && (
+          <div className="user-infos">
+            <span>{user?.displayName[0]}</span>
+            <h4>{user?.displayName}</h4>
+            <button>
+              <i className="fa-solid fa-arrow-right-from-bracket"></i>
+            </button>
+          </div>
+        )}
         {user ? <CreatePost /> : <ConnectModal />}
       </div>
       <div className="posts-container"></div>

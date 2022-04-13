@@ -5,12 +5,12 @@ import { getAnalytics } from 'firebase/analytics';
 
 const app = firebase.initializeApp({
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: 'vie-de-dev-api.firebaseapp.com',
-  projectId: 'vie-de-dev-api',
-  storageBucket: 'vie-de-dev-api.appspot.com',
-  messagingSenderId: '27768840204',
-  appId: '1:27768840204:web:7c71735570f9329834ce29',
-  measurementId: 'G-86W4H44XR8',
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 });
 
 const analytics = getAnalytics(app);

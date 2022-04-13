@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import SignUp from './SignUp';
+import Login from './Login';
 
 const ConnectModal = () => {
   const [signUp, setSignUp] = useState(true);
@@ -19,6 +21,7 @@ const ConnectModal = () => {
           Se connecter
         </button>
       </div>
+      {signUp ? <SignUp /> : <Login />}
     </div>
   );
 };
